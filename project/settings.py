@@ -271,7 +271,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
-    "https://c4empresarialyresidencial.apps.darideveloper.com",
+    "https://c4.apps.darideveloper.com",
     "https://dashboard.c4empresarialyresidencial.com",
 ]
 
