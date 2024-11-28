@@ -27,7 +27,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'landing',
+    'core',
     'leads',
     'jazzmin',
     'corsheaders',
@@ -156,11 +156,11 @@ JAZZMIN_SETTINGS = {
     "copyright": "",
 
     # Media
-    "site_logo": "landing/imgs/logo.webp",
-    "login_logo": "landing/imgs/logo.webp",
-    "login_logo_dark": "landing/imgs/logo.webp",
+    "site_logo": "core/imgs/logo.webp",
+    "login_logo": "core/imgs/logo.webp",
+    "login_logo_dark": "core/imgs/logo.webp",
     "site_logo_classes": "img-circle",
-    "site_icon": "landing/imgs/favicon.ico",
+    "site_icon": "core/imgs/favicon.ico",
     
     # Search model in header
     "search_model": [],
