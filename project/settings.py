@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'leads',
     'jazzmin',
     'corsheaders',
+    'rest_framework',
+    'rest_framework.authtoken',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
