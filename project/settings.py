@@ -277,6 +277,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "https://c4.apps.darideveloper.com",
     "https://dashboard.c4empresarialyresidencial.com",
+    "https://www.c4empresarialyresidencial.com"
 ]
 
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
