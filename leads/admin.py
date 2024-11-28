@@ -14,5 +14,5 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'status', 'phone',
                     'address', 'added_on', 'updated_on']
     search_fields = ['name', 'email', 'status__name', 'phone', 'address']
-    list_filter = ['status']
+    list_filter = ['status', 'added_on', 'updated_on']
     list_per_page = 50

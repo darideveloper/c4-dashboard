@@ -108,7 +108,7 @@ class ApiProfileTestView(TestCase):
         self.endpoint = '/api/profile/'
 
     def test_invalid_token(self):
-        """ Test invalid token """
+        """ Test using invalid token """
 
         res = self.client.get(self.endpoint, HTTP_AUTHORIZATION='Token invalid')
 
@@ -118,9 +118,21 @@ class ApiProfileTestView(TestCase):
             "message": "Invalid or expired token",
             "data": {}
         })
+    
+    def test_missing_token(self):
+        """ Test without sending token """
 
-    def test_valid_token(self):
-        """ Test valid token """
+        res = self.client.get(self.endpoint)
+
+        self.assertEqual(res.status_code, 401)
+        self.assertEqual(res.json(), {
+            "status": "error",
+            "message": "Invalid or expired token",
+            "data": {}
+        })
+
+    def test_valid(self):
+        """ Test width valid token and check user data """
 
         token, _ = Token.objects.get_or_create(user=self.user)
         res = self.client.get(

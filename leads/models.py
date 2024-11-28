@@ -20,8 +20,8 @@ class Contact(models.Model):
     email = models.EmailField(verbose_name="correo")
     phone = models.CharField(max_length=15, verbose_name="teléfono")
     address = models.TextField(verbose_name="dirección")
-    added_on = models.DateTimeField(auto_now_add=True, verbose_name="añadido")
-    updated_on = models.DateTimeField(auto_now=True, verbose_name="actualizado")
+    added_on = models.DateTimeField(auto_now_add=True, verbose_name="fecha añadido")
+    updated_on = models.DateTimeField(auto_now=True, verbose_name="fecha actualizado")
     
     class Meta:
         verbose_name = 'Contacto'
