@@ -1,0 +1,30 @@
+[
+    {
+        "model": "leads.Status",
+        "pk": 1,
+        "fields": {
+            "name": "nuevo"
+        }
+    },
+    {
+        "model": "leads.Status",
+        "pk": 2,
+        "fields": {
+            "name": "en proceso"
+        }
+    },
+    {
+        "model": "leads.Status",
+        "pk": 3,
+        "fields": {
+            "name": "contactado"
+        }
+    },
+    {
+        "model": "leads.Status",
+        "pk": 4,
+        "fields": {
+            "name": "cliente"
+        }
+    }
+]
