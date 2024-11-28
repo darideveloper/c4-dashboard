@@ -312,3 +312,7 @@ LOGGING = {
         "level": "INFO",
     },
 }
+
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'core.utils.handlers.custom_exception_handler'
+}

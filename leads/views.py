@@ -3,7 +3,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.exceptions import AuthenticationFailed, NotAuthenticated
 
 from leads import models
 from leads.serializers import ContactSerializer
@@ -12,18 +11,6 @@ from leads.serializers import ContactSerializer
 class ContactView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
-    
-    def handle_exception(self, exc):
-        # Check if the exception is related to authentication
-        if isinstance(exc, AuthenticationFailed) or isinstance(exc, NotAuthenticated):
-            return Response({
-                "status": "error",
-                "message": "Invalid or expired token",
-                "data": {}
-            }, status=401)
-
-        # For other exceptions, use the default behavior
-        return super().handle_exception(exc)
     
     def post(self, request):
         

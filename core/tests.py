@@ -115,7 +115,7 @@ class ApiProfileTestView(TestCase):
         self.assertEqual(res.status_code, 401)
         self.assertEqual(res.json(), {
             "status": "error",
-            "message": "Invalid or expired token",
+            "message": "Token inválido.",
             "data": {}
         })
     
@@ -127,7 +127,7 @@ class ApiProfileTestView(TestCase):
         self.assertEqual(res.status_code, 401)
         self.assertEqual(res.json(), {
             "status": "error",
-            "message": "Invalid or expired token",
+            "message": "Las credenciales de autenticación no se proveyeron.",
             "data": {}
         })
 
