@@ -1,0 +1,66 @@
+[
+    {
+        "model": "leads.Features",
+        "pk": 1,
+        "fields": {
+            "key": "monitoring",
+            "name": "Monitoreo en tiempo real"
+        }
+    },
+    {
+        "model": "leads.Features",
+        "pk": 2,
+        "fields": {
+            "key": "notification",
+            "name": "Notificaciones y alertas"
+        }
+    },
+    {
+        "model": "leads.Features",
+        "pk": 3,
+        "fields": {
+            "key": "storage",
+            "name": "Grabaciones"
+        }
+    },
+    {
+        "model": "leads.Features",
+        "pk": 4,
+        "fields": {
+            "key": "reporting",
+            "name": "Reportes personalizados"
+        }
+    },
+    {
+        "model": "leads.Features",
+        "pk": 5,
+        "fields": {
+            "key": "emergency",
+            "name": "Respuesta a emergencias"
+        }
+    },
+    {
+        "model": "leads.Features",
+        "pk": 6,
+        "fields": {
+            "key": "tech",
+            "name": "Tecnología avanzada"
+        }
+    },
+    {
+        "model": "leads.Features",
+        "pk": 7,
+        "fields": {
+            "key": "support",
+            "name": "Servicio al cliente"
+        }
+    },
+    {
+        "model": "leads.Features",
+        "pk": 8,
+        "fields": {
+            "key": "plans",
+            "name": "Planes personalizados"
+        }
+    }
+]

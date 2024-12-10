@@ -1,0 +1,58 @@
+[
+    {
+        "model": "leads.ResidentialType",
+        "pk": 1,
+        "fields": {
+            "key": "apartment",
+            "name": "Departamento"
+        }
+    },
+    {
+        "model": "leads.ResidentialType",
+        "pk": 2,
+        "fields": {
+            "key": "cottage",
+            "name": "Cabaña"
+        }
+    },
+    {
+        "model": "leads.ResidentialType",
+        "pk": 3,
+        "fields": {
+            "key": "townhouse",
+            "name": "Casa adosada"
+        }
+    },
+    {
+        "model": "leads.ResidentialType",
+        "pk": 4,
+        "fields": {
+            "key": "single-family",
+            "name": "Casa unifamiliar"
+        }
+    },
+    {
+        "model": "leads.ResidentialType",
+        "pk": 5,
+        "fields": {
+            "key": "condo",
+            "name": "Condominio"
+        }
+    },
+    {
+        "model": "leads.ResidentialType",
+        "pk": 6,
+        "fields": {
+            "key": "duplex",
+            "name": "Dúplex"
+        }
+    },
+    {
+        "model": "leads.ResidentialType",
+        "pk": 7,
+        "fields": {
+            "key": "other",
+            "name": "Otro"
+        }
+    }
+]

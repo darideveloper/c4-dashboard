@@ -1,0 +1,178 @@
+[
+    {
+        "model": "leads.CompanySector",
+        "pk": 1,
+        "fields": {
+            "key": "agriculture",
+            "name": "Agricultura"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 2,
+        "fields": {
+            "key": "real-estate-and-rentals",
+            "name": "Bienes raíces y alquileres"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 3,
+        "fields": {
+            "key": "hunting",
+            "name": "Caza"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 4,
+        "fields": {
+            "key": "retail-and-wholesale-trade",
+            "name": "Comercio al por menor y al por mayor"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 5,
+        "fields": {
+            "key": "construction",
+            "name": "Construcción"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 6,
+        "fields": {
+            "key": "education",
+            "name": "Educación"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 7,
+        "fields": {
+            "key": "entertainment",
+            "name": "Entretenimiento"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 8,
+        "fields": {
+            "key": "livestock",
+            "name": "Ganadería"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 9,
+        "fields": {
+            "key": "lodging",
+            "name": "Hospedaje"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 10,
+        "fields": {
+            "key": "manufacturing-industry",
+            "name": "Industria manufacturera"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 11,
+        "fields": {
+            "key": "media",
+            "name": "Medios de comunicación"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 12,
+        "fields": {
+            "key": "research-and-development",
+            "name": "Investigación y desarrollo"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 13,
+        "fields": {
+            "key": "mining",
+            "name": "Minería"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 14,
+        "fields": {
+            "key": "fishing",
+            "name": "Pesca"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 15,
+        "fields": {
+            "key": "healthcare",
+            "name": "Salud"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 16,
+        "fields": {
+            "key": "professional-and-cultural-services",
+            "name": "Servicios culturales y profesionales"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 17,
+        "fields": {
+            "key": "financial-and-insurance-services",
+            "name": "Servicios financieros y de seguros"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 18,
+        "fields": {
+            "key": "business-support",
+            "name": "Servicios de apoyo a los negocios"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 19,
+        "fields": {
+            "key": "forestry",
+            "name": "Silvicultura"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 20,
+        "fields": {
+            "key": "information-technology",
+            "name": "Tecnologías de la información"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 21,
+        "fields": {
+            "key": "transportation-and-storage",
+            "name": "Transporte y almacenamiento"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 22,
+        "fields": {
+            "key": "other",
+            "name": "Otro"
+        }
+    }
+]

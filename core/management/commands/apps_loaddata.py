@@ -13,6 +13,9 @@ class Command(BaseCommand):
         commands_data = {
             "leads": [
                 "Status",
+                "CompanySector",
+                "Features",
+                "ResidentialType",
             ],
         }
         

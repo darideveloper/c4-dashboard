@@ -16,3 +16,27 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = ['name', 'email', 'status__name', 'phone', 'address']
     list_filter = ['status', 'added_on', 'updated_on']
     list_per_page = 50
+    
+    
+@admin.register(models.CompanySector)
+class CompanySectorAdmin(admin.ModelAdmin):
+    list_display = ['name']
+    search_fields = ['name']
+    list_per_page = 50
+    ordering = ['name']
+    
+
+@admin.register(models.Features)
+class FeaturesAdmin(admin.ModelAdmin):
+    list_display = ['name']
+    search_fields = ['name']
+    list_per_page = 50
+    ordering = ['name']
+    
+
+@admin.register(models.ResidentialType)
+class ResidentialTypeAdmin(admin.ModelAdmin):
+    list_display = ['name']
+    search_fields = ['name']
+    list_per_page = 50
+    ordering = ['name']
