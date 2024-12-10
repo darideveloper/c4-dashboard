@@ -26,6 +26,14 @@ class CompanySectorAdmin(admin.ModelAdmin):
     ordering = ['name']
     
 
+@admin.register(models.CompanyEmployees)
+class CompanyEmployeesAdmin(admin.ModelAdmin):
+    list_display = ['key']
+    search_fields = ['key']
+    list_per_page = 50
+    ordering = ['id']
+    
+
 @admin.register(models.Features)
 class FeaturesAdmin(admin.ModelAdmin):
     list_display = ['name']
@@ -40,3 +48,54 @@ class ResidentialTypeAdmin(admin.ModelAdmin):
     search_fields = ['name']
     list_per_page = 50
     ordering = ['name']
+    
+    
+@admin.register(models.QuoteCompany)
+class QuoteCompanyAdmin(admin.ModelAdmin):
+    list_display = [
+        'contact',
+        'status',
+        'sector',
+        'added_on',
+        'updated_on'
+    ]
+    search_fields = [
+        'contact__name',
+        'contact__address',
+        'contact__email',
+        'contact__phone',
+        'status__name',
+        'sector__name',
+        'employees__key',
+        'features__name',
+        'added_on',
+        'updated_on'
+    ]
+    list_per_page = 20
+    list_filter = ['status', 'sector', 'employees', 'features']
+    ordering = ['-added_on']
+    
+    
+@admin.register(models.QuoteResidential)
+class QuoteResidentialAdmin(admin.ModelAdmin):
+    list_display = [
+        'contact',
+        'status',
+        'type',
+        'added_on',
+        'updated_on'
+    ]
+    search_fields = [
+        'contact__name',
+        'contact__address',
+        'contact__email',
+        'contact__phone',
+        'status__name',
+        'type__name',
+        'features__name',
+        'added_on',
+        'updated_on'
+    ]
+    list_per_page = 20
+    list_filter = ['status', 'type', 'features']
+    ordering = ['-added_on']

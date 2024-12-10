@@ -16,6 +16,7 @@ class Command(BaseCommand):
                 "CompanySector",
                 "Features",
                 "ResidentialType",
+                "CompanyEmployees",
             ],
         }
         

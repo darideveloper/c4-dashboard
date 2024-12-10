@@ -1,0 +1,37 @@
+[
+    {
+        "model": "leads.CompanyEmployees",
+        "pk": 1,
+        "fields": {
+            "key": "1 - 19"
+        }
+    },
+    {
+        "model": "leads.CompanyEmployees",
+        "pk": 2,
+        "fields": {
+            "key": "20 - 49"
+        }
+    },
+    {
+        "model": "leads.CompanyEmployees",
+        "pk": 3,
+        "fields": {
+            "key": "50 - 499"
+        }
+    },
+    {
+        "model": "leads.CompanyEmployees",
+        "pk": 4,
+        "fields": {
+            "key": "500 - 4,999"
+        }
+    },
+    {
+        "model": "leads.CompanyEmployees",
+        "pk": 5,
+        "fields": {
+            "key": "5,000+"
+        }
+    }
+]
