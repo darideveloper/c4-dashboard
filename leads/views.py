@@ -91,11 +91,9 @@ class Quote(APIView):
         
         # Get global data
         selected_service = request.data['selectedService']
-        features_keys = request.data.getlist('features')
-        print(">>>>>", features_keys, request.data)
+        features_keys = request.data['features']
         features = []
         for feature_key in features_keys:
-            print(feature_key)
             feature = models.Features.objects.get(key=feature_key)
             features.append(feature)
             

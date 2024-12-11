@@ -37,6 +37,7 @@ class ApiContactTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data={},
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
 
@@ -80,6 +81,7 @@ class ApiContactTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data=data,
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
         self.assertEqual(res.status_code, 201)
@@ -151,6 +153,7 @@ class ApiQuoteTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data={},
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
 
@@ -178,6 +181,7 @@ class ApiQuoteTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data=self.data,
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
 
@@ -202,6 +206,7 @@ class ApiQuoteTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data=self.data,
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
 
@@ -226,6 +231,7 @@ class ApiQuoteTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data=self.data,
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
 
@@ -259,6 +265,7 @@ class ApiQuoteTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data=self.data,
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
         self.assertEqual(res.status_code, 201)
@@ -285,6 +292,7 @@ class ApiQuoteTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data=self.data,
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
         self.assertEqual(res.status_code, 201)
@@ -302,6 +310,7 @@ class ApiQuoteTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data=self.data,
+            content_type='application/json',
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )
         self.assertEqual(res.status_code, 201)
@@ -333,7 +342,8 @@ class ApiQuoteTestView(TestCase):
         res = self.client.post(
             self.endpoint,
             data=self.data,
-            HTTP_AUTHORIZATION=f'Token {self.token.key}'
+            content_type='application/json',
+            HTTP_AUTHORIZATION=f'Token {self.token.key}',
         )
         self.assertEqual(res.status_code, 201)
         
