@@ -2,8 +2,8 @@
 from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import RedirectView
-from core.views import LoginView, ProfileView
-from leads.views import ContactView
+from core import views as core_views
+from leads import views as leads_views
 
 urlpatterns = [
     
@@ -15,7 +15,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     # Api endpoints
-    path('api/login/', LoginView.as_view(), name='login'),
-    path('api/profile/', ProfileView.as_view(), name='profile'),
-    path('api/contact/', ContactView.as_view(), name='contact'),
+    path('api/login/', core_views.LoginView.as_view(), name='login'),
+    path('api/profile/', core_views.ProfileView.as_view(), name='profile'),
+    path('api/contact/', leads_views.ContactView.as_view(), name='contact'),
+    path('api/quote/', leads_views.Quote.as_view(), name='contact'),
 ]
