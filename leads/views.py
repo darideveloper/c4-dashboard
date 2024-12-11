@@ -14,7 +14,7 @@ class ContactView(APIView):
     
     def post(self, request):
         
-        # Use serializer for validation
+        # Use serializer for data validation
         serializer = ContactSerializer(data=request.data)
         valid_data = serializer.is_valid(raise_exception=False)
         if not valid_data:

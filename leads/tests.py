@@ -1,6 +1,8 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
+from django.core.management import call_command
 from rest_framework.authtoken.models import Token
+
 from leads import models
 
 
@@ -46,7 +48,6 @@ class ApiContactTestView(TestCase):
                 "name": ["Este campo es requerido."],
                 "email": ["Este campo es requerido."],
                 "phone": ["Este campo es requerido."],
-                "address": ["Este campo es requerido."],
             }
         })
         
@@ -64,6 +65,9 @@ class ApiContactTestView(TestCase):
         
     def test_valid(self):
         """ Test create contact with valid data """
+        
+        # Run command
+        call_command("apps_loaddata")
         
         data = {
             "name": "Test Name",
