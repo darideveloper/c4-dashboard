@@ -51,3 +51,77 @@ $color-d: #232323
     .input-group.is-invalid
         border: 2px solid red
         border-radius: 5px
+
+// Dashboard
+
+// Background
+.content-wrapper
+    background-color: $color-a
+    color: $color-d
+
+// Headings
+h1, h2, h3, h4, h5, h6
+    color: $color-d !important
+
+// Header and footer
+.navbar-white, .main-footer
+    background-color: $color-a !important
+    color: $color-c
+
+// Global links
+a
+    color: $color-c !important
+    font-weight: bold
+    duration: 0.2s
+
+    &:hover
+        opacity: 0.5
+
+// Sidebar
+[class*=sidebar-dark-]
+    background-color: $color-c
+
+    a
+        color: $color-a !important
+
+        &:hover
+            color: $color-b !important
+
+.nav-link.active
+    background-color: rgba($color-a, 0.2) !important
+
+// Buttons
+.btn-success
+    background-color: $color-c !important
+    border-color: $color-c !important
+    color: $color-a !important
+    font-weight: bold
+
+    &:hover, &:focus, &:active
+        opacity: 0.5
+
+.btn-info, .btn-secondary
+    background-color: $color-b !important
+    border-color: $color-b !important
+    color: $color-d !important
+    font-weight: bold
+
+    &:hover, &:focus, &:active
+        opacity: 0.5
+
+.btn-primary, .btn-danger
+    background-color: $color-d !important
+    border-color: $color-d !important
+    color: $color-a !important
+    font-weight: bold
+
+    &:hover, &:focus, &:active
+        opacity: 0.5
+
+// Inputs
+.select2-selection__choice__display
+    color: $color-d !important
+    background-color: $color-b !important
+
+.select2-results__option--highlighted
+    background-color: $color-b !important
