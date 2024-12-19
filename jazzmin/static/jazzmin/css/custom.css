@@ -42,31 +42,4 @@
 .jazzmin-page .input-group.is-invalid {
   border: 2px solid red;
   border-radius: 5px;
-}
-
-.countdown {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-}
-.countdown .counters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.countdown .counters p {
-  margin: 10px;
-}
-
-#sale_form .card-body a {
-  color: #232323 !important;
-}
-#sale_form .card-body a:hover {
-  color: #232323 !important;
 }/*# sourceMappingURL=custom.css.map */

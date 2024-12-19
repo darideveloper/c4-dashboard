@@ -1,4 +1,4 @@
-// Global styles
+// Landing button styles
 const menuItems = document.querySelectorAll('.d-sm-inline-block a.nav-link')
 menuItems.forEach(item => {
   item.classList.add('btn')
