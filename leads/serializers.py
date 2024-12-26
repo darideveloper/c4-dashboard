@@ -19,11 +19,24 @@ class QuoteCompanySerializer(serializers.ModelSerializer):
     features = serializers.ListField(
         child=serializers.CharField()
     )
-
+    branches = serializers.IntegerField()
+    users = serializers.ListField(
+        child=serializers.CharField()
+    )
+    hasWifi = serializers.BooleanField()
+    
     class Meta:
         # Fields to serialize
         model = models.QuoteCompany
-        fields = ['id', 'companySector', 'companyEmployees', 'features']
+        fields = [
+            'id',
+            'companySector',
+            'companyEmployees',
+            'features',
+            'branches',
+            'users',
+            'hasWifi'
+        ]
         
         
 class QuoteResidentialSerializer(serializers.ModelSerializer):
@@ -31,6 +44,14 @@ class QuoteResidentialSerializer(serializers.ModelSerializer):
     
     # Map frontend keys to model fields using 'source'
     residentialType = serializers.CharField()
+    features = serializers.ListField(
+        child=serializers.CharField()
+    )
+    rooms = serializers.IntegerField()
+    targets = serializers.ListField(
+        child=serializers.CharField()
+    )
+    hasWifi = serializers.BooleanField()
     features = serializers.ListField(
         child=serializers.CharField()
     )

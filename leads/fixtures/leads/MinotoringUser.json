@@ -1,0 +1,42 @@
+[
+    {
+        "model": "leads.MonitoringUser",
+        "pk": 1,
+        "fields": {
+            "key": "owner",
+            "name": "Dueño(s) de la empresa"
+        }
+    },
+    {
+        "model": "leads.MonitoringUser",
+        "pk": 2,
+        "fields": {
+            "key": "manager",
+            "name": "Gerente(s)"
+        }
+    },
+    {
+        "model": "leads.MonitoringUser",
+        "pk": 3,
+        "fields": {
+            "key": "employee",
+            "name": "Empleado(s)"
+        }
+    },
+    {
+        "model": "leads.MonitoringUser",
+        "pk": 4,
+        "fields": {
+            "key": "family",
+            "name": "Familia y personal de confianza"
+        }
+    },
+    {
+        "model": "leads.MonitoringUser",
+        "pk": 5,
+        "fields": {
+            "key": "other",
+            "name": "Otros"
+        }
+    }
+]

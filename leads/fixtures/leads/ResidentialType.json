@@ -51,6 +51,14 @@
         "model": "leads.ResidentialType",
         "pk": 7,
         "fields": {
+            "key": "port",
+            "name": "Casa en el puerto"
+        }
+    },
+    {
+        "model": "leads.ResidentialType",
+        "pk": 8,
+        "fields": {
             "key": "other",
             "name": "Otro"
         }

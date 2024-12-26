@@ -1,0 +1,50 @@
+[
+    {
+        "model": "leads.MonitoringTarget",
+        "pk": 1,
+        "fields": {
+            "key": "employees",
+            "name": "Empleados domésticos"
+        }
+    },
+    {
+        "model": "leads.MonitoringTarget",
+        "pk": 2,
+        "fields": {
+            "key": "children",
+            "name": "Hijos y menores de edad"
+        }
+    },
+    {
+        "model": "leads.MonitoringTarget",
+        "pk": 3,
+        "fields": {
+            "key": "perimeter",
+            "name": "Perímetro de la propiedad"
+        }
+    },
+    {
+        "model": "leads.MonitoringTarget",
+        "pk": 4,
+        "fields": {
+            "key": "pets",
+            "name": "Mascotas"
+        }
+    },
+    {
+        "model": "leads.MonitoringTarget",
+        "pk": 5,
+        "fields": {
+            "key": "assets",
+            "name": "Bienes y activos"
+        }
+    },
+    {
+        "model": "leads.MonitoringTarget",
+        "pk": 7,
+        "fields": {
+            "key": "other",
+            "name": "Otros"
+        }
+    }
+]

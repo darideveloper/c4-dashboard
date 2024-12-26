@@ -83,7 +83,33 @@ class ResidentialType(models.Model):
 
     def __str__(self):
         return self.name
+    
+    
+class MonitoringUser(models.Model):
+    id = models.AutoField(primary_key=True)
+    key = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name = 'Usuario que monitorea'
+        verbose_name_plural = 'Usuarios que monitorean'
+
+    def __str__(self):
+        return f"{self.name} ({self.key})"
+    
+
+class MonitoringTarget(models.Model):
+    id = models.AutoField(primary_key=True)
+    key = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name = 'Objetivo de monitoreo'
+        verbose_name_plural = 'Objetivos de monitoreo'
+
+    def __str__(self):
+        return self.name
+    
 
 class QuoteCompany(models.Model):
     id = models.AutoField(primary_key=True)
@@ -93,6 +119,9 @@ class QuoteCompany(models.Model):
         CompanySector, on_delete=models.CASCADE, verbose_name="sector")
     employees = models.ForeignKey(
         CompanyEmployees, on_delete=models.CASCADE, verbose_name="empleados")
+    branches = models.IntegerField(verbose_name="sucursales")
+    users = models.ManyToManyField(MonitoringUser, verbose_name="usuarios")
+    has_wifi = models.BooleanField(verbose_name="tiene wifi")
     features = models.ManyToManyField(Features, verbose_name="características")
     contact = models.ForeignKey(
         Contact, on_delete=models.CASCADE, verbose_name="contacto")
@@ -115,6 +144,9 @@ class QuoteResidential(models.Model):
         Status, on_delete=models.CASCADE, verbose_name="estado")
     type = models.ForeignKey(
         ResidentialType, on_delete=models.CASCADE, verbose_name="tipo")
+    rooms = models.IntegerField(verbose_name="habitaciones")
+    targets = models.ManyToManyField(MonitoringTarget, verbose_name="objetivos")
+    has_wifi = models.BooleanField(verbose_name="tiene wifi")
     features = models.ManyToManyField(Features, verbose_name="características")
     contact = models.ForeignKey(
         Contact, on_delete=models.CASCADE, verbose_name="contacto")

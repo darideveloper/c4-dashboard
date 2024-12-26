@@ -17,6 +17,8 @@ class Command(BaseCommand):
                 "Features",
                 "ResidentialType",
                 "CompanyEmployees",
+                "MinotoringUser",
+                "MinotoringTarget",
             ],
         }
         
