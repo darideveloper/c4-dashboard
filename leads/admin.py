@@ -75,7 +75,21 @@ class QuoteCompanyAdmin(admin.ModelAdmin):
     list_filter = ['status', 'sector', 'employees', 'features']
     ordering = ['-added_on']
     
+
+@admin.register(models.MonitoringUser)
+class MonitoringUserAdmin(admin.ModelAdmin):
+    list_display = ['name', 'key']
+    search_fields = ['name', 'key']
+    list_per_page = 50
+    ordering = ['name']
     
+@admin.register(models.MonitoringTarget)
+class MonitoringTargetAdmin(admin.ModelAdmin):
+    list_display = ['name', 'key']
+    search_fields = ['name', 'key']
+    list_per_page = 50
+    ordering = ['name']
+
 @admin.register(models.QuoteResidential)
 class QuoteResidentialAdmin(admin.ModelAdmin):
     list_display = [

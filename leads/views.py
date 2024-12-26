@@ -48,7 +48,7 @@ class ContactView(APIView):
         }, status=status.HTTP_201_CREATED)
             
         
-class Quote(APIView):
+class QuoteView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
     
@@ -96,6 +96,7 @@ class Quote(APIView):
         for feature_key in features_keys:
             feature = models.Features.objects.get(key=feature_key)
             features.append(feature)
+        has_wifi = request.data['hasWifi']
             
         # Create quotes
         if selected_service == 'company':
@@ -103,6 +104,12 @@ class Quote(APIView):
             # Get secondary data
             sector_key = request.data['companySector']
             employees_key = request.data['companyEmployees']
+            branches = request.data['branches']
+            users_keys = request.data['users']
+            users = []
+            for user_key in users_keys:
+                user = models.MonitoringUser.objects.get(key=user_key)
+                users.append(user)
             
             sector = models.CompanySector.objects.get(key=sector_key)
             employees = models.CompanyEmployees.objects.get(key=employees_key)
@@ -113,21 +120,34 @@ class Quote(APIView):
                 status=status_new,
                 sector=sector,
                 employees=employees,
+                branches=branches,
+                has_wifi=has_wifi,
             )
+            quote.save()
+            quote.users.set(users)
         else:
             # Get secondary data
             type_key = request.data['residentialType']
             type = models.ResidentialType.objects.get(key=type_key)
+            rooms = request.data['rooms']
+            targets_keys = request.data['targets']
+            targets = []
+            for target_key in targets_keys:
+                target = models.MonitoringTarget.objects.get(key=target_key)
+                targets.append(target)
             
             # Save quote
             quote = models.QuoteResidential(
                 contact=contact,
                 status=status_new,
                 type=type,
+                rooms=rooms,
+                has_wifi=has_wifi,
             )
+            quote.save()
+            quote.targets.set(targets)
             
         # Add features to quote and save
-        quote.save()
         quote.features.set(features)
         
         return Response({

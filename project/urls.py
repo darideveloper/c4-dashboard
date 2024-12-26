@@ -18,5 +18,5 @@ urlpatterns = [
     path('api/login/', core_views.LoginView.as_view(), name='login'),
     path('api/profile/', core_views.ProfileView.as_view(), name='profile'),
     path('api/contact/', leads_views.ContactView.as_view(), name='contact'),
-    path('api/quote/', leads_views.Quote.as_view(), name='contact'),
+    path('api/quote/', leads_views.QuoteView.as_view(), name='contact'),
 ]

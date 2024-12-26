@@ -52,11 +52,15 @@ class QuoteResidentialSerializer(serializers.ModelSerializer):
         child=serializers.CharField()
     )
     hasWifi = serializers.BooleanField()
-    features = serializers.ListField(
-        child=serializers.CharField()
-    )
 
     class Meta:
         # Fields to serialize
         model = models.QuoteResidential
-        fields = ['id', 'residentialType', 'features']
+        fields = [
+            'id',
+            'residentialType',
+            'features',
+            'rooms',
+            'targets',
+            'hasWifi'
+        ]

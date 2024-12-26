@@ -128,7 +128,12 @@ class ApiQuoteTestView(TestCase):
                 "tech",
                 "plans"
             ],
-            "residentialType": "apartment"
+            "residentialType": "apartment",
+            "branches": 1,
+            "users": ["owner", "manager"],
+            "hasWifi": True,
+            "rooms": 1,
+            "targets": ["employees", "children"],
         }
         
         # Run commands
@@ -320,6 +325,9 @@ class ApiQuoteTestView(TestCase):
         self.assertEqual(quote.sector.key, self.data['companySector'])
         self.assertEqual(quote.employees.key, self.data['companyEmployees'])
         self.assertEqual(quote.features.count(), 2)
+        self.assertEqual(quote.branches, self.data['branches'])
+        self.assertEqual(quote.users.count(), 2)
+        self.assertEqual(quote.has_wifi, self.data['hasWifi'])
         
         # Valdiate response
         self.assertEqual(res.status_code, 201)
@@ -351,6 +359,9 @@ class ApiQuoteTestView(TestCase):
         quote = models.QuoteResidential.objects.all().first()
         self.assertEqual(quote.type.key, self.data['residentialType'])
         self.assertEqual(quote.features.count(), 2)
+        self.assertEqual(quote.rooms, self.data['rooms'])
+        self.assertEqual(quote.targets.count(), 2)
+        self.assertEqual(quote.has_wifi, self.data['hasWifi'])
         
         # Valdiate response
         self.assertEqual(res.status_code, 201)
