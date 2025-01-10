@@ -122,6 +122,7 @@ class QuoteCompany(models.Model):
     branches = models.IntegerField(verbose_name="sucursales")
     users = models.ManyToManyField(MonitoringUser, verbose_name="usuarios")
     has_wifi = models.BooleanField(verbose_name="tiene wifi")
+    has_cameras = models.BooleanField(verbose_name="tiene cámaras", default=False)
     features = models.ManyToManyField(Features, verbose_name="características")
     contact = models.ForeignKey(
         Contact, on_delete=models.CASCADE, verbose_name="contacto")
@@ -147,6 +148,7 @@ class QuoteResidential(models.Model):
     rooms = models.IntegerField(verbose_name="habitaciones")
     targets = models.ManyToManyField(MonitoringTarget, verbose_name="objetivos")
     has_wifi = models.BooleanField(verbose_name="tiene wifi")
+    has_cameras = models.BooleanField(verbose_name="tiene cámaras", default=False)
     features = models.ManyToManyField(Features, verbose_name="características")
     contact = models.ForeignKey(
         Contact, on_delete=models.CASCADE, verbose_name="contacto")

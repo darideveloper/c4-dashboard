@@ -97,6 +97,7 @@ class QuoteView(APIView):
             feature = models.Features.objects.get(key=feature_key)
             features.append(feature)
         has_wifi = request.data['hasWifi']
+        has_cameras = request.data['hasCameras']
             
         # Create quotes
         if selected_service == 'company':
@@ -122,6 +123,7 @@ class QuoteView(APIView):
                 employees=employees,
                 branches=branches,
                 has_wifi=has_wifi,
+                has_cameras=has_cameras,
             )
             quote.save()
             quote.users.set(users)
@@ -143,6 +145,7 @@ class QuoteView(APIView):
                 type=type,
                 rooms=rooms,
                 has_wifi=has_wifi,
+                has_cameras=has_cameras,
             )
             quote.save()
             quote.targets.set(targets)

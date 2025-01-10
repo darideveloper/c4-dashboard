@@ -123,7 +123,7 @@ class ApiQuoteTestView(TestCase):
             "phone": "1234567890",
             "selectedService": "company",
             "companySector": "other",
-            "companyEmployees": "50 - 499",
+            "companyEmployees": "+50",
             "features": [
                 "tech",
                 "plans"
@@ -132,6 +132,7 @@ class ApiQuoteTestView(TestCase):
             "branches": 1,
             "users": ["owner", "manager"],
             "hasWifi": True,
+            'hasCameras': False,
             "rooms": 1,
             "targets": ["employees", "children"],
         }
@@ -328,6 +329,7 @@ class ApiQuoteTestView(TestCase):
         self.assertEqual(quote.branches, self.data['branches'])
         self.assertEqual(quote.users.count(), 2)
         self.assertEqual(quote.has_wifi, self.data['hasWifi'])
+        self.assertEqual(quote.has_cameras, self.data['hasCameras'])
         
         # Valdiate response
         self.assertEqual(res.status_code, 201)
@@ -362,6 +364,7 @@ class ApiQuoteTestView(TestCase):
         self.assertEqual(quote.rooms, self.data['rooms'])
         self.assertEqual(quote.targets.count(), 2)
         self.assertEqual(quote.has_wifi, self.data['hasWifi'])
+        self.assertEqual(quote.has_cameras, self.data['hasCameras'])
         
         # Valdiate response
         self.assertEqual(res.status_code, 201)
