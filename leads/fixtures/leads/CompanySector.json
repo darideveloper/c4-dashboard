@@ -68,7 +68,7 @@
         "pk": 9,
         "fields": {
             "key": "lodging",
-            "name": "Hospedaje"
+            "name": "Hospedaje y Hotelería"
         }
     },
     {
@@ -173,6 +173,30 @@
         "fields": {
             "key": "other",
             "name": "Otro"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 23,
+        "fields": {
+            "key": "factories",
+            "name": "Fábricas"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 24,
+        "fields": {
+            "key": "maquiladoras",
+            "name": "Maquiladoras"
+        }
+    },
+    {
+        "model": "leads.CompanySector",
+        "pk": 25,
+        "fields": {
+            "key": "shopping malls",
+            "name": "Plazas comerciales"
         }
     }
 ]

@@ -21,7 +21,7 @@ class ContactAdmin(admin.ModelAdmin):
 @admin.register(models.CompanySector)
 class CompanySectorAdmin(admin.ModelAdmin):
     list_display = ['name']
-    search_fields = ['name']
+    search_fields = ['key', 'name']
     list_per_page = 50
     ordering = ['name']
     
