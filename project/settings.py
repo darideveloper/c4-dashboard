@@ -205,7 +205,15 @@ JAZZMIN_SETTINGS = {
     "hide_apps": [],
 
     # Hide these models when generating side menu (e.g auth.user)
-    "hide_models": [],
+    "hide_models": [
+        "leads.Status",
+        "leads.CompanySector",
+        "leads.CompanyEmployees",
+        "leads.Features",
+        "leads.ResidentialType",
+        "leads.MonitoringUser",
+        "leads.MonitoringTarget",
+    ],
 
     # List of apps (and/or models) to base side menu ordering off of
     # (does not need to contain all apps/models)
