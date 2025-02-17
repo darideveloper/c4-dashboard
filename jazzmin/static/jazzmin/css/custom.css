@@ -118,4 +118,10 @@ a:hover {
 
 .select2-results__option--highlighted {
   background-color: #9eafeb !important;
+}
+
+@media screen and (max-width: 600px) {
+  footer.main-footer {
+    text-align: center !important;
+  }
 }/*# sourceMappingURL=custom.css.map */
