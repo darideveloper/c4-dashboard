@@ -24,6 +24,7 @@ class QuoteCompanySerializer(serializers.ModelSerializer):
         child=serializers.CharField()
     )
     hasWifi = serializers.BooleanField()
+    hasCameras = serializers.CharField()
     
     class Meta:
         # Fields to serialize
@@ -35,7 +36,8 @@ class QuoteCompanySerializer(serializers.ModelSerializer):
             'features',
             'branches',
             'users',
-            'hasWifi'
+            'hasWifi',
+            'hasCameras',
         ]
         
         
@@ -52,6 +54,7 @@ class QuoteResidentialSerializer(serializers.ModelSerializer):
         child=serializers.CharField()
     )
     hasWifi = serializers.BooleanField()
+    hasCameras = serializers.CharField()
 
     class Meta:
         # Fields to serialize
@@ -62,5 +65,6 @@ class QuoteResidentialSerializer(serializers.ModelSerializer):
             'features',
             'rooms',
             'targets',
-            'hasWifi'
+            'hasWifi',
+            'hasCameras',
         ]
